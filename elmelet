@@ -1,0 +1,596 @@
+###Java kód fordításának lépései
+1. Forráskód írása:
+2. Fordítás (javac):
+Pls.: javac MyProgram.java
+1. Bytecode generálás:
+2. Futtatás (java):
+   
+###JVM: mi az, miért fontos?
+A JVM egy virtuális környezet, amely Java programokat futtat.
+Előnyei: 
+1. Platformfüggetlenség
+2. Biztonság
+3. Teljesítményoptmalizáció
+4. Automatikus memóriakezelés
+
+###Oldja fel és magyarázza, mire lehet használni: JRE, JDK, IDE
+
+A **JRE (Java Runtime Environment)** a Java alkalmazások futtatásához szükséges környezet.
+
+A **JDK (Java Development Kit)** a Java fejlesztéshez szükséges csomag. A JDK tartalmazza a JRE-t, de további fejlesztői eszközöket is kínál, például a Java fordítót (javac), a Java hibakeresőt (jdb), és egyéb eszközöket.
+
+Az **IDE (Integrated Development Environment)** egy integrált fejlesztői környezet, amely lehetővé teszi a fejlesztőknek, hogy kényelmesen fejlesszék és teszteljék alkalmazásaikat.
+
+---------------------------------
+JRE: Azoknak szükséges, akik csak Java alkalmazásokat szeretnének futtatni.
+JDK: A fejlesztőknek szükséges, akik Java alkalmazásokat szeretnének fejleszteni.
+IDE: Olyan szoftver, amely a fejlesztőknek segít a Java alkalmazások kényelmes és hatékony fejlesztésében.
+
+###main metódus: hogy néz ki, miért fontos, mi a szerepe?
+
+
+A main metódus a Java programok belépési pontja. Minden Java alkalmazásnak pontosan egy main metódussal kell rendelkeznie, hogy a program futásakor a JVM (Java Virtual Machine) megtalálja, és innen kezdje el a végrehajtást.
+
+```
+public class MyClass {
+    public static void main(String[] args) {
+        // Java program logikája itt található
+        // ...
+    }
+}
+```
+
+###Sorolja fel és jellemezze a primitív adattípusokat és a wrapper osztályaikat!
+
+#####1. Primitív Adattípusok:
+
+1. byte
+2. short
+3. int
+4. long
+5. float
+6. double
+7. char
+8. boolean
+
+#####2. Wrapper Osztályok:
+
+1. Byte
+2. Short
+3. Integer
+4. Long
+5. Float
+6. Double
+7. Character
+8. Boolean
+
+A wrapper osztályok lehetővé teszik a primitív adattípusok használatát objektumként, és kényelmes módját kínálják a primitív típusok kezelésének, például a konverzióknak és az összehasonlításoknak.
+
+###String osztály
+
+A String osztály rendkívül sokoldalú és gyakran használt az Java alkalmazásokban szöveges adatok kezelésére.
+A String osztály a Java egyik alapvető osztálya, amelyet a Java.lang csomagban találunk.
+
+###Tömb (array) deklarációja, használata
+
+A tömb (array) egy olyan adatszerkezet a Java-ban, amely egy sorozatot tárol ugyanazon típusú elemekből.
+
+
+```
+// Tömb deklarálása típus szerint, majd méret szerint
+int[] numbers; // int típusú tömb deklarálása
+
+// Tömb inicializálása egy adott mérettel
+numbers = new int[5]; // Az 'numbers' tömb 5 elemet tud tárolni
+
+// Vagy azonnal deklarálás és inicializálás
+int[] numbers = new int[5]; // Az 'numbers' tömb 5 elemet tárolhat
+```
+
+1. Értékadás
+2. Érték Kiolvasása
+3. Tömb Elemeinek Listázása
+4. For-each Ciklus
+5. Tömb Literál
+
+###Precedenciatáblázat
+
+#####1. Legmagasabb Precedencia:
+
+(): Zárójelezés (kiemelkedően magas precedencia)
+#####2. Magas Precedencia (elsőbbség):
+
+++, --: Prefix és postfix inkrementálás/dekrementálás
++, -: Egyesével negált és egyesével pozitív
+!: Logikai tagadás (nem)
+~: Bitenkénti negáció
+#####3. Közepes Precedencia:
+
+*, /, %: Szorzás, osztás, maradékos osztás
++, -: Összeadás, kivonás
+#####4. Alacsony Precedencia:
+
+<<, >>, >>>: Bitenkénti balra és jobbra tolás
+<, <=, >, >=, instanceof: Összehasonlítások
+==, !=: Egyenlőség, nem egyenlőség
+#####5. Legalacsonyabb Precedencia:
+
+&&: Logikai ÉS
+||: Logikai VAGY
+? :: Ternáris feltételes operátor
+#####6. Legalacsonyabb Precedencia (utolsó értékelés):
+
+=, +=, -=, *=, /=, %=, <<=, >>=, >>>=, &=, ^=, |=: Értékadó operátorok
+
+###Általánosan az objektum és osztály definíciója 
+
+#####Osztály
+Az osztály egy sablon vagy tervrajz, amely leírja, hogy az objektumok milyen tulajdonságokkal (mezők) és milyen műveletekkel (metódusok) rendelkeznek.
+
+#####Objektum
+
+Az objektum egy az osztály alapján létrehozott példány.
+
+###Absztrakció fogalma
+
+Az absztrakció az objektumorientált programozás egyik alapelve, amelynek célja az adatok és a műveletek közötti lényegi kapcsolatok kiemelése, miközben elrejti a részleteket és a komplexitást. Az absztrakció segít megérteni, hogy egy objektum vagy egy osztály milyen tulajdonságokkal és műveletekkel rendelkezik, anélkül hogy a belső működés részleteivel kellene foglalkozni.
+
+###Mit jelent az egységbezárás
+
+Az egységbezárás (encapsulation) az objektumorientált programozás (OOP) egyik alapelve, amely azt jelenti, hogy egy osztályba zárjuk be (encapsulate) az adatokat és a műveleteket (metódusokat), amelyek ezekkel az adatokkal végrehajthatók. Az egységbezárás azt szolgálja, hogy a kód egyes részeit elrejtse a külvilág elől, kizárva azokat a funkciókat, amelyekre az adott osztályt más osztályoknak szükségük van.
+
+Előnyei:
+
+1. Adatvédelem (Data Protection)
+2. Modulárisság és Karbantarthatóság
+3. Csatlakoztatott Műveletek (Bundled Operations)
+4. Információ Rejtés (Information Hiding)
+
+###Mi a különbség az objektum állapota és viselkedése között?
+
+Az **objektum állapota** azokat az adatokat vagy tulajdonságokat jelenti, amelyekkel az objektum rendelkezik.
+
+Az **objektum viselkedése** azokat a műveleteket vagy műveletek sorozatát jelenti, amelyeket az objektum elvégezhet. Ezek a műveletek az osztályban deklarált metódusokból vagy függvényekből származnak.
+
+###Mi az osztályattribútum és osztálymetódus?
+
+Az **osztályattribútum** olyan változó, amelyet az osztály szintjén definiálunk, nem pedig az osztály példányainak (objektumainak) szintjén. Ez azt jelenti, hogy az összes osztálypéldány megosztja ugyanazt az osztályattribútumot.
+
+Az **osztálymetódus** olyan metódus, amely az osztály szintjén definiált, nem pedig az osztály példányainak szintjén.
+
+###Mi az a getter és setter?
+
+A **getter** metódus az objektum adattagjainak értékeit adja vissza.
+
+A **setter** metódus az objektum adattagjainak értékeit beállítja.
+
+###Mi az öröklés (általánosan)?
+
+Az öröklés az objektumorientált programozás (OOP) alapelve, amely lehetővé teszi egy osztály számára, hogy örökölje egy másik osztály tulajdonságait és viselkedését.
+
+###Mi az aggregáció?
+
+Az aggregáció egy objektumorientált programozási koncepció, amely azt jelenti, hogy egy objektum egy másik objektumot tartalmaz.Az aggregáció segítségével osztályok és objektumok közötti kapcsolatokat lehet létrehozni.
+
+###Mi a kompozíció?
+
+A kompozíció az objektumorientált programozásban egy kapcsolati forma, ahol egy objektum tartalmaz egy vagy több másik objektumot.
+
+###Mi az asszociáció?
+
+Az asszociáció az objektumorientált programozásban az objektumok közötti kapcsolatot jelenti. Az asszociáció lehet egyirányú vagy kétirányú kapcsolat két vagy több objektum között.
+
+#####Egyirányú
+
+```
+class Teacher {
+    // ...
+    Student student;
+}
+
+class Student {
+    // ...
+}
+```
+
+#####Kétirányú Asszociáció
+
+```
+class Book {
+    // ...
+    Author author;
+}
+
+class Author {
+    // ...
+    Book book;
+}
+```
+
+###Mi az absztrakt osztály?
+
+Az absztrakt osztály (abstract class) az objektumorientált programozásban olyan osztály, amely nem példányosítható közvetlenül, vagyis nem lehet belőle objektumot létrehozni.
+
+###Mit csinál a final kulcsszó?
+
+##### Változóknál:
+Amikor egy változó elé helyezzük a final kulcsszót, azt jelenti, hogy a változó értéke csak egyszer állítható be, és utána nem változhat.
+
+##### Metódusoknál:
+Amikor egy metódust kijelölünk final-ként, azt jelenti, hogy a metódus nem lehet felülírva (override) leszármazott osztályokban.
+
+##### Osztálynál:
+Amikor egy osztályt kijelölünk final-ként, azt jelenti, hogy az osztály nem lehet szülőosztály. Egy final osztályból nem lehet leszármaztatni új osztályt.
+
+###Soroljon fel 4 népszerű objektumorientált programozási nyelvet!
+
+Java
+Python
+C#
+C++
+
+###Írjon egy Java osztályt, amely tartalmaz adattagokat és metódusokat ügyelve az elvárt névkonvenciókra.
+
+```
+public class SimpleClass {
+    private int number;
+    private String text;
+
+    public SimpleClass(int number, String text) {
+        this.number = number;
+        this.text = text;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public static void main(String[] args) {
+        SimpleClass obj = new SimpleClass(42, "Hello");
+        System.out.println("Number: " + obj.getNumber());
+        System.out.println("Text: " + obj.getText());
+    }
+}
+```
+
+###Milyen névkonvenciókat kell használni a Java osztály, adattag, metódus és paraméterek definiálásánál?
+
+#####Osztálynév
+Osztálynév kezdődik nagybetűvel.
+Használjunk értelmes és beszédes nevet az osztályokhoz.
+
+#####Adattagok (Változók)
+
+Adattagok nevei kezdődnek kisbetűvel (camelCase stílus).
+Használjunk értelmes és beszédes nevet az adattagokhoz.
+
+#####Metódusok
+
+Metódusnevek kezdődnek kisbetűvel (camelCase stílus).
+Használjunk értelmes és beszédes nevet a metódusokhoz.
+Az elnevezés általában tükrözze a metódus működését vagy visszatérési értékét.
+
+#####Paraméterek
+
+Paraméternevek kezdődnek kisbetűvel (camelCase stílus).
+Rövid, érthető neveket használjunk a paraméterekhez.
+
+###Mi az a konstruktor? Mi történik, ha egy osztályhoz nem adunk meg konstruktort Javaban?
+
+A konstruktor egy speciális típusú metódus egy osztályban, amelyet az osztály példányosításakor hívunk meg.
+
+ Ha az osztálynak nincs saját konstruktora, akkor a Java automatikusan létrehoz egy alapértelmezett paraméter nélküli (üres) konstruktort.
+
+ ###Hogyan példányosítunk Javaban egy osztályt?
+
+ Egy osztály példányosítása (objektummá tétel) a new kulcsszó segítségével történik a Java nyelvben.
+
+ ```
+ Person person1 = new Person("John", 30);
+```
+
+###Java Garbage Collector mit csinál? Mit kell róla tudni?
+
+A Java Garbage Collector (GC) egy automatikus memóriakezelő mechanizmus a Java programozási nyelvben.
+A fő célja, hogy segítsen megelőzni a memóriaszivárgást (memory leaks) és automatikusan felszabadítsa a már nem használt objektumok által foglalt memóriaterületeket.
+
+Néhány fontos dolog:
+
+#####1. Automatikus Memóriafelszabadítás
+
+#####2. Memóriakezelés Könnyítése
+
+#####3. Objektumok Élettartamának Kezelése
+
+#####4. GC Algoritmusok
+
+#####5. Teljesítmény
+
+###Osztály tagjainak és metódusainak láthatósági módosítói Javaban
+
+#####public
+
+#####protected
+
+#####default
+
+#####private
+
+###Javaban  a static kulcsszó használata
+
+A static kulcsszót a Java nyelvben statikus változók, metódusok és blokkok deklarálásához használjuk.
+
+A statikus változókat a változó típusa elé helyezett static kulcsszóval deklaráljuk.
+
+###Javaban hogyan deklarálunk konstanst? Névkonvenció is kell.
+
+A Javában konstansokat a **final** kulcsszóval deklaráljuk. A final kulcsszó azt jelzi, hogy az adott változó értéke egyszer beállítható, és aztán nem változtatható meg.
+
+Konstansokat gyakran nagybetűkkel írnak, szóköz helyett alulvonás karakterrel (underscore) elválasztva a szavakat, például **MAX_VALUE** vagy **PI_VALUE**.
+
+###Mi az a Java csomag? Hogyan adunk neki nevet?
+
+A Java csomag egy szervező elv az osztályok csoportosítására és strukturálására. Egy csomag olyan gyűjteményt alkot, amely tartalmazhat osztályokat, interfészeket, enumerációkat és más csomagokat is.
+
+A csomagot a **package** kulcsszóval deklaráljuk a Java osztályok tetején, a import utasítások előtt.
+
+```
+package com.example.myproject;
+```
+
+
+###A Java csomag elemeinek milyen láthatósági módosítót lehet adni? Melyik mit jelent?
+
+##### 1. public:
+Az elem bárhonnan elérhető, beleértve azon csomagokat is, amelyek nem tartalmazzák az elemet.
+
+##### 2. protected:
+Az elem elérhető azonos csomagban lévő osztályokból, valamint a leszármaztatott osztályokból
+
+##### 3. default (nincs láthatósági módosító):
+Az elem elérhető azonos csomagban lévő osztályokból.
+
+#####4. private:
+Az elem csak az adott osztályon belül érhető el, más osztályokból, beleértve az azonos csomagban lévő osztályokat is, nem hozzáférhető.
+
+###Hogyan lehet használni (meghívni) a Java csomag elemeit?
+
+##### Importálás
+```
+import com.example.myproject.MyClass;
+
+public class AnotherClass {
+    public static void main(String[] args) {
+        MyClass myObject = new MyClass();
+        // Most a MyClass osztály elemeit (metódusokat, változókat) használhatjuk
+        // ...
+    }
+}
+```
+
+### Soroljon fel 4-et a Java API beépített csomagjai közül!
+
+##### 1. java.lang
+##### 2. java.util
+##### 3. java.io
+##### 4. java.net
+
+### Mi az az annotáció? Milyen formátuma van?
+
+Az annotáció egy speciális típusú Java metainformáció, amelyet kódhoz rendelhetünk. Az annotációk segítségével metaadatokat adhatunk hozzá osztályokhoz, metódusokhoz, változókhoz és egyéb programelemekhez.
+
+Az annotációk előtagként a @ karakterrel kezdődnek, például: **@Entity**, **@Override**, **@Deprecated**.
+
+**@MyAnnotation("Custom Value")**
+
+###Mit csinál az @Override annotáció Javaban?
+
+Az **@Override** annotáció Javában azt jelzi, hogy az adott metódus egy ősosztályban vagy interfészben található metódust felülír (override) a leszármaztatott osztályban.
+
+### Javaban mit csinál a this kulcsszó? Hol használjuk, mire?
+
+A this kulcsszó Javában egy referencia az aktuális objektumra, azaz azon objektumra, amelyen belül a this kulcsszót használják.
+
+##### 1. Mezők és Lokális Változók Megkülönböztetése
+
+##### 2. Konstruktorok Belső Hivatkozása
+
+##### 3. Metódusok Belső Hivatkozása
+
+### Javaban mit csinál a super kulcsszó? Hol használjuk, mire?
+
+A **super** kulcsszó Javában egy referencia az aktuális objektum szülőosztályára.
+
+##### 1. Mezők és Metódusok Elérése
+
+##### 2. Konstruktorok Belső Hivatkozása
+
+### Miért fontos a Java Object osztálya? Mit kell róla tudni?
+
+A **java.lang.Object** osztály a Java osztály hierarchia legfelső szintű osztálya. Ez azt jelenti, hogy minden Java osztálynak közvetetten vagy közvetlenül származnia kell az Object osztályból. Az Object osztály tartalmazza az alapvető metódusokat, amelyek minden objektum számára rendelkezésre állnak.
+
+### Mi a baj a String osztállyal? Mit és hogyan használunk helyette?
+
+##### Problémák:
+
+1. Immutabilitás
+2. Teljesítmény
+3. Memory Management
+
+Alternatív Megoldások:
+**StringBuilder** és **StringBuffer**: Ha dinamikusan szeretnénk manipulálni a karakterláncokat.
+
+### Mit kell tudni a numerikus típusok közötti konverzióról?
+
+A numerikus típusok közötti konverzió során az egyik típusú értéket átalakítjuk egy másik típusúvá.
+
+##### Automatikus Konverzió (Implicit Konverzió):
+```
+int intValue = 10;
+long longValue = intValue; // Automatikus konverzió
+```
+##### Explicit Konverzió (Kasztolás):
+```
+double doubleValue = 10.5;
+int intValue = (int) doubleValue; // Explicit konverzió (kerekítés lefelé)
+```
+
+### Hogyan konvertálunk számot Stringgé és vissza? 
+
+```
+int number = 42;
+String strNumber = Integer.toString(number);
+```
+##### visszafele
+```
+String strNumber = Integer.toString(number);
+```
+
+### Paraméterátadás módjáról mit kell tudni?
+
+##### Érték Szerinti Paraméterátadás (Pass by Value):
+
+Nem változik meg a paraméter.
+
+##### Referencia Szerinti Paraméterátadás (Pass by Reference):
+
+Megváltozik a paraméter.
+
+### Hogyan lehet tetszőleges számú paramétert átadni egy Java metódusnak?
+
+Java-ban lehetőség van tetszőleges számú paraméter átadására egy metódusnak a **varargs** (változó hosszúságú argumentumlisták) segítségével.
+```
+public void printNumbers(int... numbers)
+```
+
+### Mit csinál Javaban a return utasítás?
+
+Visszaad egy értéket.
+
+### Inicializáló mező és blokk Javaban. Mire valók, hogyan használjuk őket?
+
+Inicializáló mezők és inicializáló blokkok olyan kódrészletek a Java osztályokban, amelyek segítségével az objektumokat előre beállíthatjuk, még mielőtt a konstruktorok futnának.
+
+##### Inicializáló Mezők:
+Az inicializáló mezők olyan mezők az osztályban, amelyeket közvetlenül inicializálunk az osztály deklarációjában, például:
+```
+public class MyClass {
+    private int number = 42;
+
+    public void printNumber() {
+        System.out.println(number);
+    }
+}
+```
+##### Inicializáló Blokkok:
+Az inicializáló blokkok olyan kódrészletek, amelyeket egy blokkon belül helyezünk el és amelyeket a konstruktorok előtt hajtanak végre, például:
+```
+public class MyClass {
+    private int number;
+
+    {
+        // Inicializáló blokk
+        number = 42;
+    }
+
+    public void printNumber() {
+        System.out.println(number);
+    }
+}
+```
+### Java Enum típus
+
+Az **enum** típus a Java egy olyan adattípusa, amely egy meghatározott halmaz értékeket reprezentál. Az **enum** típus segítségével definiálhatunk saját felsorolásokat, és meghatározhatjuk az ezekhez tartozó értékeket.
+
+### Java osztályok közötti öröklés
+
+##### Öröklés Szintaxisa:
+```
+class ParentClass {
+    // Osztálytulajdonságok és metódusok
+}
+
+class ChildClass extends ParentClass {
+    // Gyermekosztály saját tulajdonságok és metódusok
+}
+```
+
+### Java osztályok közötti öröklés esetén a konstruktorok hogyan öröklődnek?
+
+Az osztályok közötti öröklés során a konstruktorok is öröklődnek, de van néhány fontos szabály, amit érdemes megjegyezni:
+
+##### Alapértelmezett Konstruktor:
+Ha nincs, akkor is elérhető.
+##### Deklarált Konstruktor
+Lehet hívni a szülő osztályét **super()**-el.
+
+### Java osztályok közötti öröklés esetén mit jelent a metódus felülírása?
+
+A metódus felülírása (method overriding) azt jelenti, hogy egy gyermekosztályban definiálunk egy olyan metódust, amelynek azonos neve, visszatérési típusa és paraméterlistája van, mint az ősosztályban, azonban a gyermekosztályban egyedi implementációt adunk a metódusnak.
+
+### Java szuperosztály és alosztály is definiál egy ugyanolyan nevű statikus metódust. Hívható-e és ha igen hogyan a szuperosztály metódusa? Ha csak a szuperosztály definiál statikus metódust, akkor az alosztállyal tudjuk-e hívni?
+
+A Java-ban egy osztályban definiált statikus metódusok a klasszikus öröklődés szempontjából nem kerülnek öröklésre, ami azt jelenti, hogy nem hivatkozhatunk egy szuperosztály statikus metódusára egy alosztály példányán keresztül.
+
+### Java szuperosztály és alosztály is definiál egy ugyanolyan nevű, de más típusú adattagot. Használhatom-e és ha igen, hogyan az alosztályból a szuperosztály adattagját?
+```
+class SuperClass {
+    int number = 10;
+}
+
+class SubClass extends SuperClass {
+    double number = 20.5;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        SubClass sub = new SubClass();
+        System.out.println(sub.number); // Output: 20.5
+        
+        // A szuperosztály adattagjához a metódusokon keresztül férünk hozzá
+        System.out.println(((SuperClass) sub).number); // Output: 10
+    }
+}
+```
+### Mit jelent a konstruktorok lánca (chain of constructor)?
+A konstruktorok lánca (constructor chaining) egy tervezési minta az objektumorientált programozásban, amely lehetővé teszi az osztályok konstruktorainak egymásba ágyazását vagy hívását.
+
+### Java öröklésnél, metódus felülíráskor a láthatósági módosító változhat-e, és ha igen, hogyan?
+
+**Igen**, a láthatósági módosító változhat egy metódus felülírásakor Java-ban, de vannak szabályok, amelyeket be kell tartani:
+###### Nagyobb láthatóságú metódus:
+ Egy metódus felülírhat egy másikat, ha a láthatósági módosítója nagyobb
+
+##### Kisebb láthatóságú metódus:
+ Egy metódus nem változtathat kisebb láthatósági módosítót.
+
+### Mit jelent Javaban a polimorfizmus?
+A polimorfizmus lehetővé teszi az egyes objektumokat általános típusként kezelni, ami nagyobb rugalmasságot és újrafelhasználhatóságot biztosít a kódban.
+
+##### Statikus
+
+##### Dinamikus
+
+### Java absztrakt osztály, absztrakt metódus
+
+Az **absztrakt osztály** egy olyan osztály, amely nem hozható létre példányként.
+
+Az **absztrakt metódus** egy olyan metódus, amelyet az absztrakt osztályban deklarálunk, de nem adunk meg implementációt.
+
+### Az alkalmazásfejlesztés életciklusának lépései (felsorolás elég)
+
+1. Követelményanalízis
+2. Tervezés
+3. Fejlesztés
+4. Tesztelés
+5. Implementáció
+6. Üzemeltetés és karbantartás
+7. Dokumentáció
+8. Visszacsatolás és Felhasználói Vélemények
+
+### Mi az az UML?
+Az UML, vagyis a Unified Modeling Language egy szabványosított diagramnyelv, amelyet az objektumorientált szoftvermodellezéshez használnak.
