@@ -1,0 +1,17 @@
+for(Room room: roomArrayList){
+            ArrayList<Room> ertek;
+            if(hashMap.containsKey(room.getBuilding())){
+                ertek=hashMap.get(room.getBuilding());
+            }
+            else{
+                ertek= new ArrayList<>();
+            }
+            ertek.add(room);
+            hashMap.put(room.getBuilding(), ertek);
+        }
+
+        for (Map.Entry<Building, ArrayList<Room>> entry: hashMap.entrySet()){
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+            System.out.println("--------");
+        }
