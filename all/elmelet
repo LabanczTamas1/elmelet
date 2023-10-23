@@ -726,3 +726,173 @@ TreeMap
 
 <img src="collections.webp" alt="hierarchy" width="max"/>
 
+### A kollekció elemeinek a rendezését hogyan lehet megvalósítani?
+
+##### 1. Természetes rendezés (Comparable interfész használata):
+Ha a kollekció elemei implementálják a **Comparable** interfészt, akkor azok természetes sorrendben rendezhetők a Collections.sort() metódus segítségével.
+
+##### 2. Egyedi rendezés (Comparator interfész használata):
+Ha a kollekció elemei nem implementálják a Comparable interfészt, vagy különböző rendezési kritériumokat szeretnénk alkalmazni, akkor készíthetünk saját Comparator osztályt vagy használhatjuk a lambda kifejezéseket:
+### Comparable interfész.
+
+Comparable interfész a Java-ban található egyetlen metódussal rendelkező interfész. Ez a compareTo() metódust definiálja, amelyet egy osztály megvalósíthat, hogy annak példányait természetes sorrendbe tudjuk rendezni.
+
+
+### Comparator interfész
+
+A Comparator interfész a Java-ban található egyetlen metódussal rendelkező interfész, amelyet egy osztály implementálhat a két objektum összehasonlításához.
+
+
+### Collections osztály
+
+A java.util.Collections osztály egy segédosztály a Java Collections Framework részeként. Ez az osztály statikus metódusokat tartalmaz, amelyek különböző műveleteket végeznek a kollekciókon, például rendezés, keresés, törlés, másolás stb.
+
+### Java beágyazott osztály
+A beágyazott osztály (nested class) egy olyan osztály, amely egy másik osztályon belül van definiálva. A Java lehetővé teszi osztályok definiálását más osztályokban. Az ilyen típusú osztályoknak négy fajtája van.
+
+### Statikus beágyazott osztály
+Egy statikus beágyazott osztály ugyanúgy van definiálva, mint egy belső osztály, de statikus modifikátorral van ellátva. A statikus beágyazott osztály nem fér hozzá a külső osztály nem statikus tagjaihoz.
+
+### Java local class
+
+Egy helyi osztály egy metódusban vagy blokkban van definiálva. A helyi osztály csak az adott metódusban vagy blokkban látható.
+
+### Java anonymous class
+Egy névtelen osztály olyan osztály, amely nincs nevén, és egy interfészt vagy egy absztrakt osztályt implementál. Általában olyan helyzetekben használják, ahol csak egyszeri alkalomra van szükség egy osztályra.
+
+### Java Funkcionális interfész
+
+A Java funkcionális interfész egy olyan interfész, amely csak egy absztrakt metódust tartalmaz.
+
+### Soroljon fel 5 beépített Java funkcionális interfészt
+
+##### 1. Predicate<T>
+
+##### 2. Function<T, R>
+
+##### 3. Consumer<T>
+
+##### 4. Supplier<T>
+
+##### 5. UnaryOperator<T>
+
+###  Java lambda kifejezés
+A lambda kifejezés egy rövidített, olvasható és tiszta módszer az anonim (névtelen) funkciók (lambda függvények) definiálására a Java-ban. A lambda kifejezés lehetővé teszi a funkcionális interfészek gyors és egyszerű implementációját.
+
+### Java metódus referencia
+A Java metódus referencia (method reference) egy kényelmes és rövidített módszer, amely lehetővé teszi a meglévő metódusok vagy konstruktorok hivatkozását lambda kifejezések helyett.
+
+### Javadoc mit csinál, mire való, miért használjuk?
+avadoc egy eszköz a Java forráskód dokumentálására. Ezzel a programozók szöveges dokumentációt generálhatnak a Java osztályokhoz és metódusokhoz.
+
+### Soroljon fel 5 Javadoc tag-et, és mutassa be, hogy mit csinálnak.
+1. @param
+2. @return
+3.@throws vagy @exception
+4. @see
+5. @deprecated
+
+### Mi az a kivétel?
+
+A kivétel (exception) egy olyan esemény vagy állapot, amely a program normális végrehajtásától eltérő és váratlan.
+
+### Hogyan lehet kezelni a kivételt?
+
+A kivételkezelés Java-ban a try, catch, finally blokkok segítségével történik.
+
+### A kivételeknek mi a 3 alapvető kategóriája? Melyikről mit kell tudni?
+1. Kivétel a Futási Időben (Runtime Exception)
+2. Kivétel a Fordítási Időben (Checked Exception)
+3. Futásidejű Kivétel (Error)
+
+###  Hogy néz ki a try-catch-final utasítás, és melyik része mit csinál?
+
+```
+try {
+    // Kódrészlet, amely kivételt okozhat
+} catch (KivételTípus1 név1) {
+    // KivételTípus1 típusú kivétel kezelése
+    // (kódrészlet a kivételhez)
+} catch (KivételTípus2 név2) {
+    // KivételTípus2 típusú kivétel kezelése
+    // (kódrészlet a kivételhez)
+} finally {
+    // Mindig lefut, akár volt kivétel, akár nem
+    // (opcionális: kódrészlet a finalization-hoz)
+}
+```
+
+### Mit csinál a try-with-resource utasítás?
+
+A try-with-resources egy kényelmes és biztonságos módja a Java-ban az erőforrások kezelésének, például fájlok vagy adatbázis kapcsolatok lezárásának. Az erőforrások, amelyeket try-with-resources szerkezetben használunk, automatikusan lezáródnak, amikor a blokk végrehajtása befejeződik, akár kivétel történt, akár nem.
+
+try (Részforrás típusa név = kifejezés) {
+    // Kódblokk, amely használja a részforrást
+} catch (KivételTípus név) {
+    // Kivételkezelési kódblokk
+}
+
+### Hogyan lehet kivételt dobni? 
+A throw kulcsszó után egy kivétel objektumot kell megadni, amely az Exception vagy annak leszármazottja.
+`throw new ArithmeticException("Nullával való osztás nem megengedett.");`
+
+### Hogyan hozhatunk létre Java kivétel osztályokat?
+Java-ban saját kivétel osztályokat (custom exception classes) hozhatunk létre azzal, hogy egy új osztályt írunk, amely az Exception osztályból vagy annak egy leszármazottjából származik.
+```
+// Saját kivétel osztály definiálása
+class SajatKivetel extends Exception {
+    public SajatKivetel(String uzenet) {
+        super(uzenet); // Az ősosztály konstruktorának hívása
+    }
+}
+
+// Példa a saját kivétel használatára
+public class KivetelPelda {
+    public static void main(String[] args) {
+        try {
+            throw new SajatKivetel("Ez egy saját kivétel!");
+        } catch (SajatKivetel e) {
+            System.out.println("Hiba történt: " + e.getMessage());
+        }
+    }
+}
+```
+
+### Mi az az I/O Stream?
+Az I/O stream (Input/Output stream) Java-ban egy olyan mechanizmus, amely lehetővé teszi az adatok folyamatos olvasását vagy írását egy adatforrásból vagy egy adatcéltól.
+
+###  Mi az a byte stream?
+
+A byte stream (bájtfolyam) egy olyan I/O stream típus a Java-ban, amely az adatokat bájtok formájában kezeli.
+
+### Mi az a character stream?
+
+A character stream (karakterfolyam) Java-ban egy olyan I/O stream típus, amely karakterekkel (Unicode karakterekkel) dolgozik, és lehetővé teszi a karakterek olvasását és írását.
+
+### Mi az a buffered stream?
+A buffered stream (tárolt folyam) egy olyan mechanizmus a Java-ban, amely segít javítani az adatok olvasásának és írásának hatékonyságát. A buffered stream-ek az adatokat egy bufferbe olvassák be vagy írják ki, majd a bufferből végzik az olvasásokat és írásokat.
+
+### Scanning and Formatting
+
+1. A **Scanner** osztály a Java nyelvben a beviteli adatok beolvasását teszi lehetővé különböző forrásokból, például a billentyűzetről vagy fájlokból.
+
+2. A **formázás** a kimeneti adatok megjelenítésének stílusát és formáját jelenti.
+
+### Mi a 3 standard stream a Java-ban? Melyik mire való?
+Standard bemeneti folyam **(System.in)**: Ez a folyam a program bemenetét olvassa be. Alapértelmezés szerint a billentyűzetről olvas, de átirányíthatjuk fájlból vagy más forrásokból olvasásra.
+
+Standard kimeneti folyam **(System.out)**: Ez a folyam a program kimenetét írja ki. Alapértelmezés szerint a képernyőre ír, de átirányíthatjuk fájlba vagy más célokra írásra.
+
+Standard hibakimeneti folyam **(System.err)**: Ez a folyam a program hibáit és hibaüzeneteit írja ki.
+
+### Mi a data stream?
+A data stream (adatfolyam) olyan típusú folyam a Java-ban, amely az alapvető adattípusokat és objektumokat képes kezelni. Data stream-ek segítségével az adatokat bináris formában lehet írni vagy olvasni, ami hatékonyabb lehet, mint a karakterek formátumában történő tárolás vagy továbbítás.
+
+### Mi az object stream?
+Object stream (objektfolyam) a Java-ban egy olyan típusú folyam, amely lehetővé teszi Java objektumok írását és olvasását. Ez az objektfolyamokat használó alkalmazások számára lehetővé teszi az objektumok fájlokba írását és onnan olvasását, illetve hálózati kommunikáció során objektumok továbbítását.
+
+
+
+
+
+
