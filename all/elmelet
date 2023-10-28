@@ -193,7 +193,7 @@ class Student {
 }
 ```
 
-#####Kétirányú Asszociáció
+##### Kétirányú Asszociáció
 
 ```
 class Book {
@@ -447,7 +447,8 @@ String strNumber = Integer.toString(number);
 ```
 ##### visszafele
 ```
-String strNumber = Integer.toString(number);
+String number = "42";
+int strNumber = Integer.parseInt(number);
 ```
 
 ### Paraméterátadás módjáról mit kell tudni?
@@ -788,7 +789,7 @@ avadoc egy eszköz a Java forráskód dokumentálására. Ezzel a programozók s
 ### Soroljon fel 5 Javadoc tag-et, és mutassa be, hogy mit csinálnak.
 1. @param
 2. @return
-3.@throws vagy @exception
+3. @throws vagy @exception
 4. @see
 5. @deprecated
 
