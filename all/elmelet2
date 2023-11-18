@@ -3,11 +3,16 @@ JUnit egy Java programozási nyelvhez készült keretrendszer a teszteléshez. A
 
 ### Soroljon fel a JUnit eszközben használatos annotációkból ötöt és magyarázza mire valók!
 
-@Test: Jelentés: A @Test annotáció azt jelzi, hogy a metódus egy teszteset része. Amikor a JUnit a teszteket futtatja, csak azon metódusokat veszi figyelembe, amelyeket ezzel az annotációval láttak el.
-@Before: Jelentés: A @Before annotációval ellátott metódus a tesztesetek futtatása előtt hajtódik végre. Ez gyakran hasznos az előkészítő lépések végrehajtásához, például a tesztelendő objektumok inicializálásához.
-@After: Jelentés: A @After annotációval ellátott metódus a tesztesetek futtatása után hajtódik végre. Itt lehet takarítani vagy felszabadítani erőforrásokat, amelyeket a tesztek futtatása során használtunk.
-@BeforeClass: Jelentés: A @BeforeClass annotációval ellátott statikus metódus a tesztesetek futtatása előtt egyszer hajtódik végre. Ez például alkalmazható adatbázis kapcsolatok inicializálására, amelyek az összes teszt esetén azonosak.
-@AfterClass: Jelentés: A @AfterClass annotációval ellátott statikus metódus a tesztesetek futtatása után egyszer hajtódik végre. Hasznos lehet erőforrások felszabadítására vagy lezárására, amelyeket az összes teszt végrehajtása során használtunk.
+##### @Test: 
+Jelentés: A @Test annotáció azt jelzi, hogy a metódus egy teszteset része. Amikor a JUnit a teszteket futtatja, csak azon metódusokat veszi figyelembe, amelyeket ezzel az annotációval láttak el.
+##### @Before:
+Jelentés: A @Before annotációval ellátott metódus a tesztesetek futtatása előtt hajtódik végre. Ez gyakran hasznos az előkészítő lépések végrehajtásához, például a tesztelendő objektumok inicializálásához.
+##### @After:
+Jelentés: A @After annotációval ellátott metódus a tesztesetek futtatása után hajtódik végre. Itt lehet takarítani vagy felszabadítani erőforrásokat, amelyeket a tesztek futtatása során használtunk.
+##### @BeforeClass: 
+Jelentés: A @BeforeClass annotációval ellátott statikus metódus a tesztesetek futtatása előtt egyszer hajtódik végre. Ez például alkalmazható adatbázis kapcsolatok inicializálására, amelyek az összes teszt esetén azonosak.
+##### @AfterClass: 
+Jelentés: A @AfterClass annotációval ellátott statikus metódus a tesztesetek futtatása után egyszer hajtódik végre. Hasznos lehet erőforrások felszabadítására vagy lezárására, amelyeket az összes teszt végrehajtása során használtunk.
 
 ### A JUnit eszköz assertation-jai mire valók? Soroljon fel belőlük 10-et és magyarázza őket!
 
