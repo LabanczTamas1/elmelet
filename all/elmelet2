@@ -18,17 +18,26 @@ Jelentés: A @AfterClass annotációval ellátott statikus metódus a tesztesete
 
 A JUnit assertion-ök arra szolgálnak, hogy azonosítsák a várt és a tényleges értékek közötti különbségeket a tesztek futtatása során. Ha az assert statement hamis értéket ad vissza, a teszt sikertelen lesz, és a hibát jelzi. Az alábbiakban tíz JUnit assertion-t és a jelentésüket sorolom fel:
 
-1. assertEquals(expected, actual): Jelentés: Ellenőrzi, hogy az "actual" érték egyenlő-e a "expected" értékkel. Ha nem, a teszt sikertelen lesz.
+##### 1. assertEquals(expected, actual): Jelentés: Ellenőrzi, hogy az "actual" érték egyenlő-e a "expected" értékkel. Ha nem, a teszt sikertelen lesz.
 
-2. assertTrue(condition): Jelentés: Ellenőrzi, hogy a feltétel igaz-e. Ha a feltétel hamis, a teszt sikertelen lesz.
-3. assertFalse(condition): Jelentés: Ellenőrzi, hogy a feltétel hamis-e. Ha a feltétel igaz, a teszt sikertelen lesz.
-4. assertNull(object): Jelentés: Ellenőrzi, hogy az objektum null értékű-e. Ha nem, a teszt sikertelen lesz.
-5. assertNotNull(object): Jelentés: Ellenőrzi, hogy az objektum nem null értékű-e. Ha null, a teszt sikertelen lesz.
-6. assertSame(expected, actual): Jelentés: Ellenőrzi, hogy az "actual" objektum ugyanaz-e, mint a "expected" objektum (azonos memóriaterületre mutatnak-e). Ha nem, a teszt sikertelen lesz.
-7. assertNotSame(expected, actual): Jelentés: Ellenőrzi, hogy az "actual" objektum nem ugyanaz, mint a "expected" objektum. Ha ugyanaz, a teszt sikertelen lesz.
-8. assertArrayEquals(expectedArray, actualArray): Jelentés: Ellenőrzi, hogy az "actualArray" tömb elemei egyenlőek-e a "expectedArray" tömb elemeivel. Ha nem, a teszt sikertelen lesz.
-9. assertThat(value, matcher): Jelentés: A Hamcrest könyvtárat használja, és kifejezéseket biztosít, amelyekkel az értékeket összehasonlíthatjuk egy adott feltétellel.
-10. fail(): Jelentés: Kézi hiba kiváltására szolgál. A teszt sikertelen lesz, ha ez a metódus meghívódik.
+##### 2. assertTrue(condition): 
+Jelentés: Ellenőrzi, hogy a feltétel igaz-e. Ha a feltétel hamis, a teszt sikertelen lesz.
+##### 3.assertFalse(condition):
+Jelentés: Ellenőrzi, hogy a feltétel hamis-e. Ha a feltétel igaz, a teszt sikertelen lesz.
+##### 4. assertNull(object): 
+Jelentés: Ellenőrzi, hogy az objektum null értékű-e. Ha nem, a teszt sikertelen lesz.
+##### 5. assertNotNull(object):
+Jelentés: Ellenőrzi, hogy az objektum nem null értékű-e. Ha null, a teszt sikertelen lesz.
+##### 6. assertSame(expected, actual): 
+Jelentés: Ellenőrzi, hogy az "actual" objektum ugyanaz-e, mint a "expected" objektum (azonos memóriaterületre mutatnak-e). Ha nem, a teszt sikertelen lesz.
+##### 7. assertNotSame(expected, actual): 
+Jelentés: Ellenőrzi, hogy az "actual" objektum nem ugyanaz, mint a "expected" objektum. Ha ugyanaz, a teszt sikertelen lesz.
+##### 8. assertArrayEquals(expectedArray, actualArray): 
+Jelentés: Ellenőrzi, hogy az "actualArray" tömb elemei egyenlőek-e a "expectedArray" tömb elemeivel. Ha nem, a teszt sikertelen lesz.
+##### 9. assertThat(value, matcher): 
+Jelentés: A Hamcrest könyvtárat használja, és kifejezéseket biztosít, amelyekkel az értékeket összehasonlíthatjuk egy adott feltétellel.
+##### 10. fail(): 
+Jelentés: Kézi hiba kiváltására szolgál. A teszt sikertelen lesz, ha ez a metódus meghívódik.
 
 ### A kollekciók aggregáló műveletei esetén a pipeline-nak milyen részei vannak? Melyik mire való? 
 
