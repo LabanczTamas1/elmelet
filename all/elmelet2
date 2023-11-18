@@ -1,0 +1,165 @@
+### Mire való a JUnit?
+JUnit egy Java programozási nyelvhez készült keretrendszer a teszteléshez. A neve a "Java Unit" szavak összevonásából származik, és az egységtesztelési folyamatokat támogatja Java alkalmazásokban. Az egységtesztelés olyan tesztelési folyamat, amelyben az alkalmazás legkisebb részeit, az ún. egységeket tesztelik, hogy ellenőrizzék, hogy helyesen működnek-e.
+
+### Soroljon fel a JUnit eszközben használatos annotációkból ötöt és magyarázza mire valók!
+
+@Test: Jelentés: A @Test annotáció azt jelzi, hogy a metódus egy teszteset része. Amikor a JUnit a teszteket futtatja, csak azon metódusokat veszi figyelembe, amelyeket ezzel az annotációval láttak el.
+@Before: Jelentés: A @Before annotációval ellátott metódus a tesztesetek futtatása előtt hajtódik végre. Ez gyakran hasznos az előkészítő lépések végrehajtásához, például a tesztelendő objektumok inicializálásához.
+@After: Jelentés: A @After annotációval ellátott metódus a tesztesetek futtatása után hajtódik végre. Itt lehet takarítani vagy felszabadítani erőforrásokat, amelyeket a tesztek futtatása során használtunk.
+@BeforeClass: Jelentés: A @BeforeClass annotációval ellátott statikus metódus a tesztesetek futtatása előtt egyszer hajtódik végre. Ez például alkalmazható adatbázis kapcsolatok inicializálására, amelyek az összes teszt esetén azonosak.
+@AfterClass: Jelentés: A @AfterClass annotációval ellátott statikus metódus a tesztesetek futtatása után egyszer hajtódik végre. Hasznos lehet erőforrások felszabadítására vagy lezárására, amelyeket az összes teszt végrehajtása során használtunk.
+
+### A JUnit eszköz assertation-jai mire valók? Soroljon fel belőlük 10-et és magyarázza őket!
+
+A JUnit assertion-ök arra szolgálnak, hogy azonosítsák a várt és a tényleges értékek közötti különbségeket a tesztek futtatása során. Ha az assert statement hamis értéket ad vissza, a teszt sikertelen lesz, és a hibát jelzi. Az alábbiakban tíz JUnit assertion-t és a jelentésüket sorolom fel:
+
+assertEquals(expected, actual):
+
+Jelentés: Ellenőrzi, hogy az "actual" érték egyenlő-e a "expected" értékkel. Ha nem, a teszt sikertelen lesz.
+assertTrue(condition):
+
+Jelentés: Ellenőrzi, hogy a feltétel igaz-e. Ha a feltétel hamis, a teszt sikertelen lesz.
+assertFalse(condition):
+
+Jelentés: Ellenőrzi, hogy a feltétel hamis-e. Ha a feltétel igaz, a teszt sikertelen lesz.
+assertNull(object):
+
+Jelentés: Ellenőrzi, hogy az objektum null értékű-e. Ha nem, a teszt sikertelen lesz.
+assertNotNull(object):
+
+Jelentés: Ellenőrzi, hogy az objektum nem null értékű-e. Ha null, a teszt sikertelen lesz.
+assertSame(expected, actual):
+
+Jelentés: Ellenőrzi, hogy az "actual" objektum ugyanaz-e, mint a "expected" objektum (azonos memóriaterületre mutatnak-e). Ha nem, a teszt sikertelen lesz.
+assertNotSame(expected, actual):
+
+Jelentés: Ellenőrzi, hogy az "actual" objektum nem ugyanaz, mint a "expected" objektum. Ha ugyanaz, a teszt sikertelen lesz.
+assertArrayEquals(expectedArray, actualArray):
+
+Jelentés: Ellenőrzi, hogy az "actualArray" tömb elemei egyenlőek-e a "expectedArray" tömb elemeivel. Ha nem, a teszt sikertelen lesz.
+assertThat(value, matcher):
+
+Jelentés: A Hamcrest könyvtárat használja, és kifejezéseket biztosít, amelyekkel az értékeket összehasonlíthatjuk egy adott feltétellel.
+fail():
+
+Jelentés: Kézi hiba kiváltására szolgál. A teszt sikertelen lesz, ha ez a metódus meghívódik.
+
+### A kollekciók aggregáló műveletei esetén a pipeline-nak milyen részei vannak? Melyik mire való? 
+
+Forrás (Source):
+A pipeline kezdeti része, és egy kollekciót vagy más adatforrást reprezentál. Például egy lista, tömb vagy más kollekció lehet a forrás.
+
+Közbenső Műveletek (Intermediate Operations):
+Ezek a műveletek a forrásból származó adatokon hajtódnak végre, és egy új stream-et hoznak létre eredményül. Ezek a műveletek nem módosítják az eredeti adatokat, hanem egy új stream-et hoznak létre, amely a további műveletekre alkalmazható. Példák közé tartoznak a filter, map, sorted, distinct és limit műveletek.
+
+Terminális Műveletek (Terminal Operations):
+Ezek a műveletek zárják le a stream pipeline-t, és visszaadnak egy végeredményt vagy módosítják az adatokat az eredeti forrásban. Terminális műveletek például a collect, forEach, reduce, count, min, max és toArray.
+
+### Hogyan működik a collect művelet a kollekciók aggregáló műveletei esetén?
+
+Java-ban a kollekciók aggregálásához általában a Stream API-t használjuk.
+A collect metódus a Stream API-ban egy terminális művelet, amely lehetővé teszi egy Collector használatát az elemek összegyűjtésére egy kívánt formában. A Collector olyan objektum, amely a Stream elemeit egy kívánt formába transzformálja (például egy listába, halmazba vagy egyedi típusba).
+
+### Hogyan működik a reduce művelet a kollekciók aggregáló műveletei esetén?
+A reduce művelet egy aggregáló művelet a Java Stream API-ban, és azt használjuk, amikor egy kollekció (például egy lista) elemeit egyetlen értékbe szeretnénk aggregálni.
+T result = stream.reduce(identity, accumulator);
+
+### Mutassa be a kollekciók aggregáló műveleteiből a groupingBy és reducing műveleteket!
+
+### reducing:
+A reducing művelet segítségével egy kollekció elemeit egy bináris művelet (pl. összeadás, szorzás) alapján lehet csökkenteni egyetlen eredményre.
+
+##### groupingBy:
+A groupingBy művelet segítségével csoportosítani lehet a kollekció elemeit egy adott tulajdonság (pl. kulcs) alapján.
+
+### A JAR eszköz mire való, milyen műveleteket lehet vele elvégezni?
+
+A JAR (Java Archive) eszköz egy parancssori eszköz a Java fejlesztők és rendszergazdák számára, amely lehetővé teszi Java alkalmazások csomagolását és kezelését JAR fájlokban.
+
+Csomagolás (Packaging)
+Kicsomagolás (Unpackaging)
+Futtatás (Executing)
+MANIFEST.MF Módosítása
+JAR Fájl Elemzése
+
+### A JAR file „manifest”-jét mutassa be!
+
+A JAR fájl "manifest" egy META-INF könyvtárban található MANIFEST.MF nevű fájl, ami tartalmazza azokat az információkat, amelyek a JAR fájlra vonatkoznak. A MANIFEST.MF fájlban olyan információk találhatók, mint a főosztály neve, a JAR fájl verziója, a forráskód és egyéb metaadatok.
+
+### Mi az a Java modul?
+
+A Java modul egy olyan egység, amely lehetővé teszi a Java alkalmazások részeinek logikai csoportosítását és izolációját.
+A Java modulok célja a fejlesztési és futási időbeli izoláció javítása, valamint a kódbázis rendezettebbé és karbantarthatóbbá tétele.
+
+1. Moduldefiníció (Module Declaration)
+2. Exportált Csomagok (Exported Packages)
+3. Importált Modulok (Required Modules)
+
+### A Java modul module-info.java állományában mit jelentenek az exports, exports … to, requires, uses direktívák?
+
+Az *exports* direktíva azokat a csomagokat határozza meg, amelyeket a modul exportál más modulok számára. Az exportált csomagok tartalmazzák azokat az osztályokat és interfészeket, amelyek láthatók lesznek a másik modulok számára.
+
+Az *exports ... to* direktíva lehetővé teszi az exportált csomagok pontosabb vezérlését. Például megadhatjuk, hogy egy adott csomagot csak egy bizonyos modulnak exportáljunk.
+
+A *requires* direktíva a modul függőségeit határozza meg. A modul csak azokat a csomagokat éri el, amelyeket az itt megadott modulok exportálnak.
+
+Az *uses* direktíva a szolgáltatást használó moduloknak jelzi, hogy egy adott szolgáltatást (service) használ a modul. A uses direktíva után a használt szolgáltatás típusát kell megadni.
+
+### Hogyan működik a collect művelet a kollekciók aggregáló műveletei esetén?
+
+Java-ban a kollekciók aggregálásához általában a Stream API-t használjuk.
+A collect metódus a Stream API-ban egy terminális művelet, amely lehetővé teszi egy Collector használatát az elemek összegyűjtésére egy kívánt formában. A Collector olyan objektum, amely a Stream elemeit egy kívánt formába transzformálja (például egy listába, halmazba vagy egyedi típusba).
+
+### Hogyan működik a reduce művelet a kollekciók aggregáló műveletei esetén?
+A reduce művelet egy aggregáló művelet a Java Stream API-ban, és azt használjuk, amikor egy kollekció (például egy lista) elemeit egyetlen értékbe szeretnénk aggregálni.
+T result = stream.reduce(identity, accumulator); 
+
+### Project Lombok-kal hogyan ad meg equals-t és HashCode-ot?
+A Project Lombok egy Java-ban használható könyvtár és az @EqualsAndHashCode annotáció használatával a Lombok automatikusan generálja az equals és hashCode metódusokat a megjelölt osztály számára.
+
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+### Project Lombok-kal hogyan ad meg toString-et?
+A Project Lombok @ToString annotációval lehetővé teszi a toString metódus automatikus generálását az osztályban. A paraméterei lehetővé teszik azt, hogy egyedi beállításokat adjunk meg a toString()-nek.
+
+import lombok.ToString;
+
+@ToString
+public class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+### Project Lombok-kal hogyan ad meg gettert, settert?
+A @Getter és @Setter annotációkat használva a Project Lombok segítségével egyszerűen generálhatsz gettereket és settereket a Java osztályokban.
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class Person {
+    private String name;
+    private int age;
+}
+
+### Mi az a Project Lombok? 
+A Project Lombok egy Java-ban használható könyvtár, amely segít a boilerplate kód csökkentésében, vagyis azokban a kódrészletekben, amelyeket gyakran az osztályok létrehozása során kell beírni.
+Ilyen például a Getter és Setter generálás, Konstruktor generálás, toString() generálás és az Equals és HashCode generálás.
+
