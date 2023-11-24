@@ -1,3 +1,36 @@
+### Mi az az I/O Stream?
+Az I/O stream (Input/Output stream) Java-ban egy olyan mechanizmus, amely lehetővé teszi az adatok folyamatos olvasását vagy írását egy adatforrásból vagy egy adatcéltól.
+
+###  Mi az a byte stream?
+
+A byte stream (bájtfolyam) egy olyan I/O stream típus a Java-ban, amely az adatokat bájtok formájában kezeli.
+
+### Mi az a character stream?
+
+A character stream (karakterfolyam) Java-ban egy olyan I/O stream típus, amely karakterekkel (Unicode karakterekkel) dolgozik, és lehetővé teszi a karakterek olvasását és írását.
+
+### Mi az a buffered stream?
+A buffered stream (tárolt folyam) egy olyan mechanizmus a Java-ban, amely segít javítani az adatok olvasásának és írásának hatékonyságát. A buffered stream-ek az adatokat egy bufferbe olvassák be vagy írják ki, majd a bufferből végzik az olvasásokat és írásokat.
+
+### Scanning and Formatting
+
+1. A **Scanner** osztály a Java nyelvben a beviteli adatok beolvasását teszi lehetővé különböző forrásokból, például a billentyűzetről vagy fájlokból.
+
+2. A **formázás** a kimeneti adatok megjelenítésének stílusát és formáját jelenti.
+
+### Mi a 3 standard stream a Java-ban? Melyik mire való?
+Standard bemeneti folyam **(System.in)**: Ez a folyam a program bemenetét olvassa be. Alapértelmezés szerint a billentyűzetről olvas, de átirányíthatjuk fájlból vagy más forrásokból olvasásra.
+
+Standard kimeneti folyam **(System.out)**: Ez a folyam a program kimenetét írja ki. Alapértelmezés szerint a képernyőre ír, de átirányíthatjuk fájlba vagy más célokra írásra.
+
+Standard hibakimeneti folyam **(System.err)**: Ez a folyam a program hibáit és hibaüzeneteit írja ki.
+
+### Mi a data stream?
+A data stream (adatfolyam) olyan típusú folyam a Java-ban, amely az alapvető adattípusokat és objektumokat képes kezelni. Data stream-ek segítségével az adatokat bináris formában lehet írni vagy olvasni, ami hatékonyabb lehet, mint a karakterek formátumában történő tárolás vagy továbbítás.
+
+### Mi az object stream?
+Object stream (objektfolyam) a Java-ban egy olyan típusú folyam, amely lehetővé teszi Java objektumok írását és olvasását. Ez az objektfolyamokat használó alkalmazások számára lehetővé teszi az objektumok fájlokba írását és onnan olvasását, illetve hálózati kommunikáció során objektumok továbbítását.
+
 ### Mire való a JUnit?
 JUnit egy Java programozási nyelvhez készült keretrendszer a teszteléshez. A neve a "Java Unit" szavak összevonásából származik, és az egységtesztelési folyamatokat támogatja Java alkalmazásokban. Az egységtesztelés olyan tesztelési folyamat, amelyben az alkalmazás legkisebb részeit, az ún. egységeket tesztelik, hogy ellenőrizzék, hogy helyesen működnek-e.
 
