@@ -1,5 +1,5 @@
 ### Javadoc mit csinál, mire való, miért használjuk?
-avadoc egy eszköz a Java forráskód dokumentálására. Ezzel a programozók szöveges dokumentációt generálhatnak a Java osztályokhoz és metódusokhoz.
+Javadoc egy eszköz a Java forráskód dokumentálására. Ezzel a programozók szöveges dokumentációt generálhatnak a Java osztályokhoz és metódusokhoz.
 
 ### Soroljon fel 5 Javadoc tag-et, és mutassa be, hogy mit csinálnak.
 1. @param
