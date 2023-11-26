@@ -1,3 +1,13 @@
+### Javadoc mit csinál, mire való, miért használjuk?
+avadoc egy eszköz a Java forráskód dokumentálására. Ezzel a programozók szöveges dokumentációt generálhatnak a Java osztályokhoz és metódusokhoz.
+
+### Soroljon fel 5 Javadoc tag-et, és mutassa be, hogy mit csinálnak.
+1. @param
+2. @return
+3. @throws vagy @exception
+4. @see
+5. @deprecated
+
 ### Mi az az I/O Stream?
 Az I/O stream (Input/Output stream) Java-ban egy olyan mechanizmus, amely lehetővé teszi az adatok folyamatos olvasását vagy írását egy adatforrásból vagy egy adatcéltól.
 
